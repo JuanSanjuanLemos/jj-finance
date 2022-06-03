@@ -47,7 +47,7 @@ export const Container = styled.main`
         transition: filter linear 0.2s;
         margin: 4rem auto 0;
         &:hover{
-          filter: brightness(1.1);
+          filter: brightness(0.8);
         }
         span{
           font-size: 2rem;

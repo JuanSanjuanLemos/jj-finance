@@ -30,10 +30,7 @@ export default function Login() {
             </div>
             <h1>Bem-vindo!</h1>
             <p>
-              <span className="icon-github">
-                <BsGoogle />
-              </span>{" "}
-              Faça login com seu email para começar
+              Faça login com seu email para começar!
             </p>
             <button onClick={() => signIn("google")}>
               <span className="icon-github">

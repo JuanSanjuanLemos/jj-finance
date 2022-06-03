@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align='center'>
+  <img  src='./public/images/logo.svg'>
+</p>
+<br>
+<h1 align='center'>JJ Finance</h1>
+<p align='center'>💲 Seu APP de controle financeiro 💲</p>
 
-## Getting Started
+<p align="center">
+ <a href="#objetivo">Sobre</a> •
+ <a href="#tecnologias">Tecnologias</a> •
+ <a href="#projeto">Projeto</a> • 
+ <a href="#licenca">Licença</a> • 
+ <a href="#autor">Autor</a>
+</p>
 
-First, run the development server:
+<br>
+<br>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<img src='./filesReadme/allpage.gif'>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<br>
+<br>
+<h1 id='objetivo'>📚Objetivo</h1>
+<p>
+  O objetivo desta aplicação é armazenar valores de entrada e de saída em um Banco de dados e permitir o usuário logar por meio de uma autentificação com o Gmail.
+</p>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<br>
+<br>
+<h1 id='tecnologias'>👨🏿‍💻Tecnologias</h1>
+<p>
+  <ul>
+    <li>Nextjs</li>
+    <li>Typescript</li>
+    <li>Styled Components</li>
+    <li>FaunaDB</li>
+    <li>Next-auth</li>
+    <li>React-modal</li>
+  </ul>
+</p>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<br>
+<br>
+<h1 id='projeto'>🔗Projeto</h1>
+<p>
+  Link para o projeto na vercel: <a>https://jj-finance.vercel.app/</a>
+</p>
 
-## Learn More
+<br>
+<br>
+<h1 id='licenca'>📃Licença</h1>
+<p>
+MIT License
 
-To learn more about Next.js, take a look at the following resources:
+Copyright (c) 2022 Juan Lemos
+</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br>
+<br>
+<h1 id='autor'>👨🏿‍🦱Autor</h1>
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/97101332?v=4" width="100px;" alt=""/>
+<a href="https://www.linkedin.com/in/juan-lemos-75830b1a2/" title="Linkedin"> <h3>Juan Lemos 👨🏿‍💻</h3></a>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<p>
+  Feito com ❤️ por Juan Lemos.<br> 👋🏽 Entre em contato!
+</p>
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<div>
+  <a href="https://instagram.com/_juan.lemos_" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+  <a href = "mailto:juansanjuan.dev@gmail.com"><img src="https://img.shields.io/badge/-juansanjuan.dev@gmail.com-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/juan-lemos-75830b1a2/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+</div>
