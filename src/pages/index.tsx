@@ -9,8 +9,19 @@ import { ModalNewTransaction } from "../components/ModalNewTransaction";
 import { TransactionsProvider } from "../contexts/transactionsContext";
 import { getSession } from "next-auth/react";
 import { GetServerSideProps } from "next";
+import { useEffect, useState } from "react";
+import useWindowDimensions from "../hooks/useWindowDimensions";
+import { ListTransactions } from "../components/ListTransactions";
 
 export default function Home() {
+  const [isSmallVersion, setIsSmallVersion] = useState(false);
+  const { width } = useWindowDimensions();
+  useEffect(()=>{
+    if(width < 576){
+      setIsSmallVersion(true)
+    }
+    else setIsSmallVersion(false)
+  },[width]);
   return (
     <TransactionsProvider>
       <ModalProvider>
@@ -19,7 +30,7 @@ export default function Home() {
         </Head>
         <Header />
         <GroupCards />
-        <TableTransactions/>
+        {isSmallVersion ? <ListTransactions /> : <TableTransactions/>}
         <ModalNewTransaction />
       </ModalProvider>
     </TransactionsProvider>

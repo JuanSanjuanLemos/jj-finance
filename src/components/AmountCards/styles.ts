@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.article`
   width: 20rem;
-  height: 8.5rem;
+  max-width: 80vw;
   padding: 1.5rem 2rem;
   border-radius: 0.5rem;
   background-color: var(--white);
@@ -24,6 +24,7 @@ export const Container = styled.article`
   strong{
     font-size: 2.25rem;
     font-weight: 500;
+    word-wrap: break-word;
   }
 
   &.-balance{

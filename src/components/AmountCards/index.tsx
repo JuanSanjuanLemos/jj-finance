@@ -14,7 +14,7 @@ export function AmountCards({imageName,type,value, className}:AmountCardsProps){
       <div className="wrapper-type">
         <h3>{type}</h3>
         <div className="img">
-          <Image src={`/images/${imageName}`} layout='fill' />
+          <Image src={`/images/${imageName}`} alt={imageName} layout='fill' />
         </div>
       </div>
       <strong>{value}</strong>

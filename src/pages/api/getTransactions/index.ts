@@ -1,7 +1,7 @@
 import { query as q} from 'faunadb';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getSession, signOut } from 'next-auth/react';
-import { client } from '../../services/fauna';
+import { client } from '../services/fauna';
 
 
 interface Resp {

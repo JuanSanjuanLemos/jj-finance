@@ -12,7 +12,7 @@ export function Transaction({title, category,date,price,type}:TransactionProps){
   return(
     <Container>
       <td className="title">{title}</td>
-      <td className={`price -${type}`}>{price}</td>
+      <td className={`price -${type}`}>{type=== "withdrawal"&& "-"} {price}</td>
       <td className="category">{category}</td>
       <td className="date">{date}</td>
     </Container>

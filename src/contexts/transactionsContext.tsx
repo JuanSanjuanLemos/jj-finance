@@ -38,7 +38,7 @@ export function TransactionsProvider({children}:TransactionsProviderProps){
   const [valueInflows, setValueInflows] = useState(0);
   const [valueWithdrawals, setValueWithdrawal] = useState(0);
   const [amount, setAmount] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const router = useRouter();
 
@@ -96,7 +96,7 @@ export function TransactionsProvider({children}:TransactionsProviderProps){
     return transactionsFormatted;
   }
   return(
-    <TransactionsContext.Provider value={{getData,listTransactions,valueWithdrawals,valueInflows,amount, isLoading}}>
+    <TransactionsContext.Provider value={{getData,listTransactions,valueWithdrawals,valueInflows,amount,isLoading}}>
       {children}
     </TransactionsContext.Provider>
   )

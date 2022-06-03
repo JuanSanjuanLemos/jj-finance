@@ -10,16 +10,16 @@ export function Header(){
   const [isSmallVersion, setIsSmallVersion] = useState(false);
   const { width } = useWindowDimensions();
   useEffect(()=>{
-    if(width < 564){
+    if(width < 576){
       setIsSmallVersion(true)
     }
     else setIsSmallVersion(false)
-  },[width])
+  },[width]);
   return(
     <Container>
       <div className="content">
         <div className={`wrapper-logo ${isSmallVersion&& "-sm"}`}>
-         <Image priority src={isSmallVersion ? "/favicon.svg" : "/images/logo.svg"} layout="fill" />
+         <Image priority src={isSmallVersion ? "/favicon.svg" : "/images/logo.svg"} alt="JJ Finance" layout="fill" />
         </div>
         <div className="wrapper-buttons">
           <SignOutButton />

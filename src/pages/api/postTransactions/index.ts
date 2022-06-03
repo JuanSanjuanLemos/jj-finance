@@ -1,8 +1,7 @@
 import { query as q } from "faunadb";
 import { NextApiRequest, NextApiResponse } from "next";
 import { getSession } from "next-auth/react";
-import { useTransactionsContext } from "../../../hooks/useTransactionsContext";
-import { client } from "../../services/fauna";
+import { client } from "../services/fauna";
 
 interface User {
   ref:{
@@ -15,7 +14,6 @@ interface User {
 }
 
 module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
-  const {getData} = useTransactionsContext();
   const newTransaction = req.body.data;
   const session = await getSession({req});
   try {
@@ -33,8 +31,7 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
     );
     res.status(200).json(dbs.data);
   } catch (e) {
-    getData();
-    res.status(500);
+    res.redirect('/login')
     console.log(e);
   }
 };

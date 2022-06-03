@@ -61,7 +61,7 @@ export function FormNewTransaction() {
           }`}
         >
           <div className="wrapper-icon">
-            <Image src={"/images/inflows.svg"} layout="fill" />
+            <Image src={"/images/inflows.svg"} alt="Entradas" layout="fill" />
           </div>
           Entrada
         </div>
@@ -72,7 +72,7 @@ export function FormNewTransaction() {
           }`}
         >
           <div className="wrapper-icon">
-            <Image src={"/images/withdrawal.svg"} layout="fill" />
+            <Image src={"/images/withdrawal.svg"} alt="Saídas" layout="fill" />
           </div>
           Saída
         </div>

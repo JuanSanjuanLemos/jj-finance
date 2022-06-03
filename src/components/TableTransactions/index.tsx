@@ -24,7 +24,7 @@ export function TableTransactions() {
                 </tr>
               </thead>
               <tbody>
-                {listTransactions.map((t) => {
+                {listTransactions.map((t, i) => {
                   return (
                     <Transaction
                       category={t.category}
@@ -32,7 +32,7 @@ export function TableTransactions() {
                       price={t.price}
                       title={t.title}
                       type={t.type}
-                      key={t.title}
+                      key={i++}
                     />
                   );
                 })}

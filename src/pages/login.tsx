@@ -15,7 +15,7 @@ export default function Login() {
     if (session) {
       router.push(`/`);
     }
-  }, [session]);
+  }, [session,router]);
 
   return (
     <>
@@ -26,7 +26,7 @@ export default function Login() {
         <section className="content">
           <div className="login">
             <div className="logo">
-              <Image src="/images/logo-white.svg" layout="fill" priority />
+              <Image src="/images/logo-white.svg" alt="JJ Finance" layout="fill" priority />
             </div>
             <h1>Bem-vindo!</h1>
             <p>
