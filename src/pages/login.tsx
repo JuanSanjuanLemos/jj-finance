@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { FcGoogle } from "react-icons/fc";
-import { BsGoogle } from "react-icons/bs";
 import { Container } from "../components/login";
 
-import { signIn, useSession } from "next-auth/react";
+import { signIn, useSession,getCsrfToken } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Head from "next/head";
@@ -12,6 +11,8 @@ export default function Login() {
   const { data: session } = useSession();
   const router = useRouter();
   useEffect(() => {
+    console.log(session?.user)
+    console.log(getCsrfToken())
     if (session) {
       router.push(`/`);
     }

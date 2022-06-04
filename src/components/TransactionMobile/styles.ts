@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Box = styled.article`
   width: 100%;
   max-width: 25rem;
-  margin: auto;
+  margin: 0 auto 2rem;
   background-color: var(--white);
   padding: 1.2rem 1.5rem;
   border-radius: 0.5rem;

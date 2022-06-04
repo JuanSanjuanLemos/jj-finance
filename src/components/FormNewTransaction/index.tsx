@@ -46,7 +46,7 @@ export function FormNewTransaction() {
 
   function getDate(){
     const date = Date.now()
-    return (new Date(date)).toLocaleDateString();
+    return (new Date(date)).toLocaleDateString("pt-BR");
   }
   return (
     <Form onSubmit={handleSubmit}>
