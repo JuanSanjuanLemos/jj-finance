@@ -12,12 +12,16 @@
  <a href="#licenca">Licença</a> • 
  <a href="#autor">Autor</a>
 </p>
-
+<br>
+<p align="center">
+  <img src="https://img.shields.io/github/license/JuanSanjuanLemos/jj-finance?" /> 
+  <img src="https://img.shields.io/github/forks/JuanSanjuanLemos/jj-finance?" />
+  <img src="https://img.shields.io/github/stars/JuanSanjuanLemos/jj-finance?" />
+</p>
 <br>
 <br>
 
-<img src='./filesReadme/allpage.gif'>
-
+<h2 align="center">🚧 Projeto em construção 🚧</h2>
 
 <br>
 <br>
@@ -25,6 +29,10 @@
 <p>
   O objetivo desta aplicação é armazenar valores de entrada e de saída em um Banco de dados e permitir o usuário logar por meio de uma autentificação com o Gmail.
 </p>
+
+<br>
+<br>
+<img src='./filesReadme/allPage.gif'>
 
 <br>
 <br>
@@ -54,6 +62,7 @@
 MIT License
 
 Copyright (c) 2022 Juan Lemos
+
 </p>
 
 <br>

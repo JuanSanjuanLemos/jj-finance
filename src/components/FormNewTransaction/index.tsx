@@ -16,7 +16,7 @@ interface TrasactionFormatted {
 
 
 export function FormNewTransaction() {
-  const {getData} = useTransactionsContext();
+  const {getData, listTransactions,setIsLoading} = useTransactionsContext();
 
   const [type, setType] = useState("inflow");
   const [title, setTitle] = useState("");
@@ -26,10 +26,11 @@ export function FormNewTransaction() {
   const {closeModal} = useModal();
   async function handleSubmit(event: FormEvent){
     event.preventDefault();
+    setIsLoading(true);
     const date = getDate()
     closeModal();
-    
-    const newTransaction = {title,price,type,category, date:date};
+
+    const newTransaction = {title,price,type,category, date:date, id: Date.now()};
     const requestOptions ={
       method: "POST",
       headers: {"Content-Type" : "application/json"},

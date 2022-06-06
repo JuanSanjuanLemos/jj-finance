@@ -8,11 +8,20 @@ export const Box = styled.article`
   padding: 1.2rem 1.5rem;
   border-radius: 0.5rem;
 
-  h2{
-    color: var(--title);
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 0.5rem;
+  .title-close{
+    display: flex;
+    justify-content: space-between;
+    button{
+      background-color: transparent;
+      color: var(--red);
+      font-size: 1.5rem;
+    }
+    h2{
+      color: var(--title);
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
   }
 
   strong{

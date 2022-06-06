@@ -7,6 +7,7 @@ interface TransactionsProviderProps{
 }
 
 interface Trasaction {
+  id:number;
   title: string;
   price: number;
   category: string;
@@ -15,6 +16,7 @@ interface Trasaction {
 }
 
 interface TrasactionFormatted {
+  id:number;
   title: string;
   price: string;
   category: string;
@@ -24,17 +26,21 @@ interface TrasactionFormatted {
 
 interface TransactionContextData{
   getData: () => void;
-  listTransactions: TrasactionFormatted[];
+  listTransactionsFormatted: TrasactionFormatted[];
+  listTransactions: Trasaction[];
   valueWithdrawals: number;
   valueInflows:number;
   amount: number;
   isLoading:boolean;
+  deleteTransaction: (id:number) => void;
+  setIsLoading: (isLoading: boolean)=>void;
 }
 
 export const TransactionsContext = createContext<TransactionContextData>({} as TransactionContextData);
 
 export function TransactionsProvider({children}:TransactionsProviderProps){
-  const [listTransactions, setListTransactions] = useState<TrasactionFormatted[]>([]);
+  const [listTransactionsFormatted, setListTransactionsFormatted] = useState<TrasactionFormatted[]>([]);
+  const [listTransactions, setListTransactions] = useState<Trasaction[]>([]);
   const [valueInflows, setValueInflows] = useState(0);
   const [valueWithdrawals, setValueWithdrawal] = useState(0);
   const [amount, setAmount] = useState(0);
@@ -48,7 +54,8 @@ export function TransactionsProvider({children}:TransactionsProviderProps){
     try{
       const res = await fetch("/api/getTransactions");
       const newData = await res.json();
-      setListTransactions(formattedData(newData));
+      setListTransactionsFormatted(formattedData(newData));
+      setListTransactions(newData);
       getValueInflows(newData);
       getValueWithdrawals(newData);
     }
@@ -74,6 +81,20 @@ export function TransactionsProvider({children}:TransactionsProviderProps){
     },0));
   }
 
+  async function deleteTransaction(id:number){
+    const newList = listTransactions.filter(t=> t.id !== id);
+    setListTransactions(listTransactions);
+    setListTransactionsFormatted(formattedData(newList));
+    setIsLoading(true);
+    const requestOptions ={
+      method: "POST",
+      headers: {"Content-Type" : "application/json"},
+      body: JSON.stringify({data: newList})
+    };
+    await fetch("api/updateTransactions", requestOptions);
+    getData();
+  }
+
   useEffect(()=>{
     setAmount(valueInflows - valueWithdrawals);
 
@@ -82,6 +103,7 @@ export function TransactionsProvider({children}:TransactionsProviderProps){
     const transactionsFormatted: TrasactionFormatted[] = data.map(
       (t) => {
         return {
+          id: t.id,
           title: t.title,
           price: t.price.toLocaleString("pt-br", {
             style: "currency",
@@ -96,7 +118,7 @@ export function TransactionsProvider({children}:TransactionsProviderProps){
     return transactionsFormatted;
   }
   return(
-    <TransactionsContext.Provider value={{getData,listTransactions,valueWithdrawals,valueInflows,amount,isLoading}}>
+    <TransactionsContext.Provider value={{getData,listTransactions,listTransactionsFormatted,deleteTransaction, setIsLoading, valueWithdrawals,valueInflows,amount,isLoading}}>
       {children}
     </TransactionsContext.Provider>
   )

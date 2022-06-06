@@ -5,7 +5,7 @@ import { TransactionMobile } from "../TransactionMobile";
 import { Container } from "./styles";
 
 export function ListTransactions(){
-  const { listTransactions, getData, isLoading } = useTransactionsContext();
+  const { listTransactionsFormatted, getData, isLoading } = useTransactionsContext();
   useEffect(() => {
     getData();
   }, []);
@@ -13,13 +13,13 @@ export function ListTransactions(){
     <Container>
       <div className="header">
         <h1>Listagem</h1>
-        <p className="amount-items">{listTransactions.length} itens</p>
+        <p className="amount-items">{listTransactionsFormatted.length} itens</p>
       </div>
       {!isLoading ? (
-          listTransactions.length > 0 ? (
+          listTransactionsFormatted.length > 0 ? (
             <div className="wrapper-list">
-              {listTransactions.map((t, i) => {
-                return <TransactionMobile category={t.category} date={t.date} price={t.price} title={t.title} type={t.type} key={i++} />
+              {listTransactionsFormatted.map((t) => {
+                return <TransactionMobile id={t.id} key={t.id} category={t.category} date={t.date} price={t.price} title={t.title} type={t.type} />
               })}
             </div>
           ) : (

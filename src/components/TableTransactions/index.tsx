@@ -5,7 +5,7 @@ import { Transaction } from "../Transaction";
 import { Container } from "./styles";
 
 export function TableTransactions() {
-  const { listTransactions, getData, isLoading } = useTransactionsContext();
+  const { listTransactionsFormatted, getData, isLoading } = useTransactionsContext();
   useEffect(() => {
     getData();
   }, []);
@@ -13,7 +13,7 @@ export function TableTransactions() {
     <Container>
       <div className="wrapper">
         {!isLoading ? (
-          listTransactions.length > 0 ? (
+          listTransactionsFormatted.length > 0 ? (
             <table>
               <thead>
                 <tr>
@@ -24,7 +24,7 @@ export function TableTransactions() {
                 </tr>
               </thead>
               <tbody>
-                {listTransactions.map((t, i) => {
+                {listTransactionsFormatted.map((t) => {
                   return (
                     <Transaction
                       category={t.category}
@@ -32,7 +32,8 @@ export function TableTransactions() {
                       price={t.price}
                       title={t.title}
                       type={t.type}
-                      key={i++}
+                      id={t.id}
+                      key={t.id}
                     />
                   );
                 })}

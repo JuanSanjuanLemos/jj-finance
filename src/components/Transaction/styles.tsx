@@ -25,4 +25,18 @@ export const Container = styled.tr`
   .category, .date, .price{
     width: 20%;
   }
+  .delete{
+    button{
+      background-color: var(--red);
+      padding: 0.8rem;
+      border-radius: 1.2rem;
+      font-weight: bold;
+      color: var(--white);
+      transition: filter 0.2s linear;
+      &:hover{
+        filter: brightness(0.8);
+      }
+    }
+
+  }
 `;
