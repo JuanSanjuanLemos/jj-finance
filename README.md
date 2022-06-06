@@ -1,11 +1,11 @@
-<p style="text-align: center;">
+<p align='center'>
   <img  src='./public/images/logo.svg'>
 </p>
 <br>
-<h1 style="text-align: center;">JJ Finance</h1>
-<p style="text-align: center;">💲 Seu APP de controle financeiro 💲</p>
+<h1 align='center'>JJ Finance</h1>
+<p align='center'>💲 Seu APP de controle financeiro 💲</p>
 
-<p style="text-align: center;">
+<p align="center">
  <a href="#objetivo">Sobre</a> •
  <a href="#tecnologias">Tecnologias</a> •
  <a href="#projeto">Projeto</a> • 
@@ -14,7 +14,7 @@
  <a href="#autor">Autor</a>
 </p>
 <br>
-<p style="text-align: center;">
+<p align="center">
   <img src="https://img.shields.io/github/license/JuanSanjuanLemos/jj-finance?" /> 
   <img src="https://img.shields.io/github/forks/JuanSanjuanLemos/jj-finance?" />
   <img src="https://img.shields.io/github/stars/JuanSanjuanLemos/jj-finance?" />
@@ -22,7 +22,7 @@
 <br>
 <br>
 
-<h2 style="text-align: center;">🚧 Projeto em construção 🚧</h2>
+<h2 align="center">🚧 Projeto em construção 🚧</h2>
 
 <br>
 <br>
@@ -33,7 +33,7 @@
 
 <br>
 <br>
-<img src='./filesReadme/allpage.gif'>
+<img src='./filesReadme/allPage.gif'>
 
 <br>
 <br>
@@ -82,7 +82,7 @@ Copyright (c) 2022 Juan Lemos
 </p>
 
 <div>
-  <a href="https://instagram.com/_juan.lemos_" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white"> </a>
-  <a href = "mailto:juansanjuan.dev@gmail.com"><img src="https://img.shields.io/badge/-juansanjuan.dev@gmail.com-%23333?style=for-the-badge&logo=gmail&logoColor=white"></a>
+  <a href="https://instagram.com/_juan.lemos_" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
+  <a href = "mailto:juansanjuan.dev@gmail.com" target="_blank" ><img src="https://img.shields.io/badge/-juansanjuan.dev@gmail.com-%23333?style=for-the-badge&logo=gmail&logoColor=white" ></a>
   <a href="https://www.linkedin.com/in/juan-lemos-75830b1a2/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> 
 </div>
