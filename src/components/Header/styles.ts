@@ -3,11 +3,12 @@ import styled from "styled-components";
 export const Container = styled.header`
   .content {
     display: flex;
+    max-width: 1440px
     align-items: center;
     gap: 1.5rem;
     justify-content: space-between;
     background-color: var(--blue);
-    padding: 2rem 6rem 8.25rem;
+    padding: 2rem 1rem 8.25rem;
     .wrapper-logo{
       width: 12rem;
       height: 3rem;
@@ -15,19 +16,6 @@ export const Container = styled.header`
       &.-sm{
         width: 4rem;
       }
-    }
-
-    @media (max-width: 1024px) {
-     &{
-       padding-left: 2rem;
-       padding-right: 2rem;
-     } 
-    }
-    @media (max-width: 576px) {
-     &{
-       padding-left: 1rem;
-       padding-right: 1rem;
-     } 
     }
 
     .wrapper-buttons{
