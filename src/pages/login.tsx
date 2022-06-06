@@ -2,22 +2,13 @@ import Image from "next/image";
 import { FcGoogle } from "react-icons/fc";
 import { Container } from "../components/login";
 
-import { signIn, useSession,getCsrfToken } from "next-auth/react";
+import { signIn, useSession,getCsrfToken, getSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Head from "next/head";
+import { GetServerSideProps } from "next";
 
 export default function Login() {
-  const { data: session } = useSession();
-  const router = useRouter();
-  useEffect(() => {
-    console.log(session?.user)
-    console.log(getCsrfToken())
-    if (session) {
-      router.push(`/`);
-    }
-  }, [session,router]);
-
   return (
     <>
       <Head>
@@ -33,7 +24,7 @@ export default function Login() {
             <p>
               Faça login com seu email para começar!
             </p>
-            <button onClick={() => signIn("google")}>
+            <button onClick={() => signIn("google",{redirect: true, callbackUrl: '/'},{ prompt: "login" })}>
               <span className="icon-github">
                 <FcGoogle />
               </span>
@@ -44,4 +35,17 @@ export default function Login() {
       </Container>
     </>
   );
+}
+
+export const getServerSideProps: GetServerSideProps = async({req}) =>{
+  const session = await getSession({req});
+  if(session?.user){
+      return{
+          redirect:{
+              destination: '/',
+              permanent:false,
+          }
+      }
+  }
+  return{props:{}}
 }

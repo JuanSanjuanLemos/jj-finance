@@ -41,7 +41,6 @@ export function FormNewTransaction() {
     setTitle("");
     setPrice(0);
     setCategory("");
-
   }
 
   function getDate(){
