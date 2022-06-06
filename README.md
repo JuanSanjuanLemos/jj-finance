@@ -33,7 +33,9 @@
 
 <br>
 <br>
-<img src='./filesReadme/allPage.gif'>
+<p align='center'>
+  <img  src='./filesReadme/allpage.gif'>
+</p>
 
 <br>
 <br>
