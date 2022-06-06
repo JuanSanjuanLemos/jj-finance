@@ -9,6 +9,7 @@
  <a href="#objetivo">Sobre</a> •
  <a href="#tecnologias">Tecnologias</a> •
  <a href="#projeto">Projeto</a> • 
+ <a href="#referencias">Referências</a> • 
  <a href="#licenca">Licença</a> • 
  <a href="#autor">Autor</a>
 </p>
@@ -54,6 +55,11 @@
 <p>
   Link para o projeto na vercel: <a>https://jj-finance.vercel.app/</a>
 </p>
+
+<br>
+<br>
+
+<p>O layout dessa aplicação foi inspirado no layout dt Money da Rocketseat</p>
 
 <br>
 <br>
