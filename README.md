@@ -16,8 +16,6 @@
 <br>
 <p align="center">
   <img src="https://img.shields.io/github/license/JuanSanjuanLemos/jj-finance?" /> 
-  <img src="https://img.shields.io/github/forks/JuanSanjuanLemos/jj-finance?" />
-  <img src="https://img.shields.io/github/stars/JuanSanjuanLemos/jj-finance?" />
 </p>
 <br>
 <br>
